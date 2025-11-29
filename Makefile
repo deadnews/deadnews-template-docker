@@ -2,12 +2,12 @@
 
 default: check
 
-install:
-	pre-commit install
+update:
+	prek auto-update
 
 check: pc
 pc:
-	pre-commit run -a
+	prek run -a
 
 bumped:
 	git cliff --bumped-version
@@ -16,7 +16,7 @@ bumped:
 # make release-$(git cliff --bumped-version)-alpha.0
 release-%: check
 	git cliff -o CHANGELOG.md --tag $*
-	pre-commit run --files CHANGELOG.md || pre-commit run --files CHANGELOG.md
+	prek run --files CHANGELOG.md || prek run --files CHANGELOG.md
 	git add CHANGELOG.md
 	git commit -m "chore(release): prepare for $*"
 	git push
