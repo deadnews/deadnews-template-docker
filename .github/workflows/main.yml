@@ -19,7 +19,7 @@ jobs:
       PRERELEASE: ${{ contains(github.ref, 'alpha') || contains(github.ref, 'beta') }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Create GitHub Release
         run: |
