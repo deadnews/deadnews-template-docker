@@ -4,8 +4,7 @@ ci:
   autoupdate_schedule: quarterly
 
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+  - repo: builtin
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -19,39 +18,34 @@ repos:
         args: [--fix=lf]
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.7.4
+    rev: c2bc67fe8f8f549cc489e00ba8b45aa18ee713b1 # frozen: v3.8.1
     hooks:
       - id: prettier
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.41.0
+    rev: 631208b7aac2daa8b707f55e7331f9112b0e062d # frozen: v1.44.0
     hooks:
       - id: typos
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.0
+    rev: 9f48a48aa91a6040d749ad68ec70907d907a5a7f # frozen: 0.37.0
     hooks:
       - id: check-github-workflows
       - id: check-renovate
 
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.10
+    rev: 393031adb9afb225ee52ae2ccd7a5af5525e03e8 # frozen: v1.7.11
     hooks:
       - id: actionlint
 
-  - repo: https://github.com/mrtazz/checkmake
-    rev: 0.2.2
-    hooks:
-      - id: checkmake
-
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.12.0-2
+    rev: 2a30809d16bc7a60d9b97353c797f42b510d3368 # frozen: v3.12.0-2
     hooks:
       - id: shfmt
         types: []
         types_or: [shell, dockerfile]
 
   - repo: https://github.com/aleksac/hadolint-py
-    rev: v2.14.0
+    rev: 458cb25edf664682e3e856a53a2f9af33e068297 # frozen: v2.14.0
     hooks:
       - id: hadolint

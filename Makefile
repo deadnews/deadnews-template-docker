@@ -3,7 +3,8 @@
 default: check
 
 update:
-	prek auto-update
+	prek auto-update --freeze
+	inact run -update
 
 check: pc
 pc:
